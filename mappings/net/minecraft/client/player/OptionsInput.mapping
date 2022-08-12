@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/g/c net/minecraft/client/player/OptionsInput
+	FIELD d keyInputs [Z
+	FIELD e options Lnet/minecraft/client/p;
+	METHOD <init> (Lnet/minecraft/client/p;)V
+		ARG 1 options

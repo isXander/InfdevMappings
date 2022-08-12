@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/l net/minecraft/client/MouseGrabber
+	FIELD d robot Ljava/awt/Robot;
+	FIELD g cursor Lorg/lwjgl/input/Cursor;

@@ -1,0 +1,34 @@
+CLASS net/minecraft/client/d net/minecraft/client/MinecraftClient
+	FIELD B fullscreen Z
+	FIELD D timer Lnet/minecraft/client/f;
+	FIELD E canvas Ljava/awt/Canvas;
+	FIELD J displayWidth I
+	FIELD K displayHeight I
+	FIELD O gameDir Ljava/io/File;
+	FIELD a gameMode Lnet/minecraft/client/d/a;
+	FIELD b width I
+	FIELD c height I
+	FIELD f player Lnet/minecraft/client/g/a;
+	FIELD h user Lnet/minecraft/client/k;
+	FIELD i host Ljava/lang/String;
+	FIELD j appletMode Z
+	FIELD k paused Z
+	FIELD n currentScreen Lnet/minecraft/client/c/i;
+	FIELD p loadmapUser Ljava/lang/String;
+	FIELD q loadmapId I
+	FIELD x running Z
+	FIELD z mouseGrabbed Z
+	METHOD <init> (Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V
+		ARG 1 canvas
+		ARG 2 applet
+		ARG 3 width
+		ARG 4 height
+		ARG 5 fullscreen
+	METHOD a getGameDir ()Ljava/io/File;
+	METHOD a openScreen (Lnet/minecraft/client/c/i;)V
+		ARG 1 screen
+	METHOD b destroy ()V
+	METHOD c quitGame ()V
+	METHOD d grabMouse ()V
+	METHOD f toggleFullscreen ()V
+	METHOD run run ()V

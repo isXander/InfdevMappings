@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/b/n net/minecraft/client/model/Model
+	METHOD a render (FFFFFF)V
+	METHOD b setupTransforms (FFFFFF)V

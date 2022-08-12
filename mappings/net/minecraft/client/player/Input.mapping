@@ -1,0 +1,9 @@
+CLASS net/minecraft/client/g/b net/minecraft/client/player/Input
+	FIELD a forward F
+	FIELD b side F
+	FIELD c jumping Z
+	METHOD a processInput ()V
+	METHOD a processKeyEvent (IZ)V
+		ARG 1 inputKey
+		ARG 2 keyDown
+	METHOD b clearInputs ()V

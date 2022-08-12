@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/p net/minecraft/client/GameOptions
+	FIELD j forward Lnet/minecraft/client/g;
+	FIELD k left Lnet/minecraft/client/g;
+	FIELD l backward Lnet/minecraft/client/g;
+	FIELD m right Lnet/minecraft/client/g;
+	FIELD n jump Lnet/minecraft/client/g;

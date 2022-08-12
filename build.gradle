@@ -25,7 +25,7 @@ plugins {
 	id 'maven-publish'
 }
 
-def minecraft_version = "c0.30_01c"
+def minecraft_version = "inf-20100618"
 
 def ENV = System.getenv()
 // Fetch build number from Jenkins
@@ -187,15 +187,15 @@ task downloadMcJars(dependsOn: downloadWantedVersionManifest) {
 	}
 }
 
-task downloadIntermediary(type: Download) {
-	def destination = new File(cacheFilesMinecraft, "${minecraft_version}-intermediary.tiny")
-	outputs.file(destination)
+// task downloadIntermediary(type: Download) {
+// 	def destination = new File(cacheFilesMinecraft, "${minecraft_version}-intermediary.tiny")
+// 	outputs.file(destination)
 
-	group = buildMappingGroup
-	def url = "https://github.com/Juuxel/PotentialLamp/raw/master/intermediary/${minecraft_version}.tiny"
-	src com.google.common.net.UrlEscapers.urlFragmentEscaper().escape(url)
-	dest destination
-}
+// 	group = buildMappingGroup
+// 	def url = "https://github.com/Juuxel/PotentialLamp/raw/master/intermediary/${minecraft_version}.tiny"
+// 	src com.google.common.net.UrlEscapers.urlFragmentEscaper().escape(url)
+// 	dest destination
+// }
 
 task downloadMcLibs(dependsOn: downloadWantedVersionManifest) {
 	group = setupGroup
@@ -233,66 +233,66 @@ task downloadMcLibs(dependsOn: downloadWantedVersionManifest) {
 	}
 }
 
-task invertIntermediary(dependsOn: downloadIntermediary, type: FileOutput) {
-	group = buildMappingGroup
-	def v1Input = downloadIntermediary.dest
+// task invertIntermediary(dependsOn: downloadIntermediary, type: FileOutput) {
+// 	group = buildMappingGroup
+// 	def v1Input = downloadIntermediary.dest
 
-	output = new File(cacheFilesMinecraft, "${minecraft_version}-intermediary-inverted.tiny")
-	outputs.file(output)
+// 	output = new File(cacheFilesMinecraft, "${minecraft_version}-intermediary-inverted.tiny")
+// 	outputs.file(output)
 
-	outputs.upToDateWhen { false }
+// 	outputs.upToDateWhen { false }
 
-	doLast {
-		logger.lifecycle(":building inverted intermediary")
+// 	doLast {
+// 		logger.lifecycle(":building inverted intermediary")
 
-		String[] v1Args = [
-				v1Input.getAbsolutePath(),
-				output.getAbsolutePath(),
-				"intermediary", "official"
-		]
+// 		String[] v1Args = [
+// 				v1Input.getAbsolutePath(),
+// 				output.getAbsolutePath(),
+// 				"intermediary", "official"
+// 		]
 
-		new CommandReorderTiny().run(v1Args)
-	}
-}
+// 		new CommandReorderTiny().run(v1Args)
+// 	}
+// }
 
-task patchIntermediary(dependsOn: [downloadMcJars, downloadIntermediary]) {
-	group = buildMappingGroup
-	def intermediaryTinyInput = downloadIntermediary.dest
+// task patchIntermediary(dependsOn: [downloadMcJars, downloadIntermediary]) {
+// 	group = buildMappingGroup
+// 	def intermediaryTinyInput = downloadIntermediary.dest
 
-	def outputFile = new File(cacheFilesMinecraft, "${minecraft_version}-intermediary-full.tiny")
-	outputs.file(outputFile)
+// 	def outputFile = new File(cacheFilesMinecraft, "${minecraft_version}-intermediary-full.tiny")
+// 	outputs.file(outputFile)
 
-	outputs.upToDateWhen { false }
+// 	outputs.upToDateWhen { false }
 
-	doLast {
-		logger.lifecycle(":patching intermediary")
-		String[] args = [
-				clientJar.getAbsolutePath(),
-				intermediaryTinyInput.getAbsolutePath(),
-				outputFile.getAbsolutePath(),
-				"--writeAll"
-		]
+// 	doLast {
+// 		logger.lifecycle(":patching intermediary")
+// 		String[] args = [
+// 				clientJar.getAbsolutePath(),
+// 				intermediaryTinyInput.getAbsolutePath(),
+// 				outputFile.getAbsolutePath(),
+// 				"--writeAll"
+// 		]
 
-		new CommandRewriteIntermediary().run(args)
-	}
-}
+// 		new CommandRewriteIntermediary().run(args)
+// 	}
+// }
 
-task mapIntermediaryJar(dependsOn: [downloadMcLibs, downloadIntermediary, downloadMcJars]) {
-	group = mapJarGroup
-	inputs.files downloadMcLibs.outputs.files.files
-	outputs.file(intermediaryJar)
+// task mapIntermediaryJar(dependsOn: [downloadMcLibs, downloadIntermediary, downloadMcJars]) {
+// 	group = mapJarGroup
+// 	inputs.files downloadMcLibs.outputs.files.files
+// 	outputs.file(intermediaryJar)
 
-	//Force the task to always run
-	outputs.upToDateWhen { false }
+// 	//Force the task to always run
+// 	outputs.upToDateWhen { false }
 
-	doLast {
-		logger.lifecycle(":mapping minecraft to intermediary")
-		def tinyInput = downloadIntermediary.dest
-		mapJar(intermediaryJar, clientJar, tinyInput, libraries, "official", "intermediary")
-	}
-}
+// 	doLast {
+// 		logger.lifecycle(":mapping minecraft to intermediary")
+// 		def tinyInput = downloadIntermediary.dest
+// 		mapJar(intermediaryJar, clientJar, tinyInput, libraries, "official", "intermediary")
+// 	}
+// }
 
-task setupYarn(dependsOn: mapIntermediaryJar) {
+task setupYarn/*(dependsOn: mapIntermediaryJar)*/ {
 	group = yarnGroup
 }
 
@@ -301,7 +301,7 @@ task yarn(dependsOn: setupYarn, type: JavaExec) {
 	mainClass = 'cuchaz.enigma.gui.Main'
 	classpath = configurations.enigmaRuntime
 	args '-jar'
-	args intermediaryJar.absolutePath
+	args clientJar.absolutePath
 	args '-mappings'
 	args mappingsDir.absolutePath
 	args '-profile'
@@ -324,7 +324,7 @@ task checkMappings {
 	}
 }
 
-task buildYarnTiny(dependsOn: mapIntermediaryJar, type: WithV2FileOutput) {
+task buildYarnTiny(/*dependsOn: mapIntermediaryJar,*/ type: WithV2FileOutput) {
 	group = buildMappingGroup
 	inputs.dir mappingsDir
 	if (!libs.exists()) {
@@ -340,25 +340,25 @@ task buildYarnTiny(dependsOn: mapIntermediaryJar, type: WithV2FileOutput) {
 		logger.lifecycle(":generating tiny mappings")
 
 		new MapSpecializedMethodsCommand().run(
-			intermediaryJar.getAbsolutePath(),
+			clientJar.getAbsolutePath(),
 			"enigma",
 			mappingsDir.getAbsolutePath(),
-			"tinyv2:intermediary:named",
+			"tinyv2:official:named",
 			v2Output.getAbsolutePath()
 		)
 
 		new ConvertMappingsCommand().run(
 			"tinyv2",
 			v2Output.getAbsolutePath(),
-			"tiny:intermediary:named",
+			"tiny:official:named",
 			v1Output.getAbsolutePath())
 	}
 }
 
-task mergeTiny(dependsOn: ["buildYarnTiny", "invertIntermediary"], type: FileOutput) {
+task mergeTiny(dependsOn: ["buildYarnTiny"/*, "invertIntermediary"*/], type: FileOutput) {
 	group = buildMappingGroup
 	def yarnTinyInput = buildYarnTiny.v1Output
-	def intermediaryTinyInput = invertIntermediary.output
+	def intermediaryTinyInput = clientJar
 
 	def unorderedResultMappings = new File(tempDir, "mappings-unordered.tiny")
 	output = new File(tempDir, "mappings.tiny")
@@ -435,7 +435,7 @@ clean.doFirst {
 
 tasks.build.dependsOn "compressTiny","tinyJar","v2UnmergedYarnJar"
 
-task mapYarnJar(dependsOn: [compressTiny, mapIntermediaryJar]) {
+task mapYarnJar(dependsOn: [compressTiny/*, mapIntermediaryJar*/]) {
 	group = mapJarGroup
 	inputs.files downloadMcLibs.outputs.files.files
 	outputs.file(yarnJar)
@@ -447,12 +447,12 @@ task mapYarnJar(dependsOn: [compressTiny, mapIntermediaryJar]) {
 		logger.lifecycle(":mapping minecraft to yarn")
 
 		File tinyInput = compressTiny.output
-		mapJar(yarnJar, intermediaryJar, tinyInput, libraries, "intermediary", "named")
+		mapJar(yarnJar, clientJar, tinyInput, libraries, "intermediary", "named")
 	}
 }
 
-task exportMappingsOfficial(dependsOn: downloadIntermediary) {
-	def composeInput = downloadIntermediary.dest
+task exportMappingsOfficial/*(dependsOn: downloadIntermediary)*/ {
+	def composeInput = clientJar
 
 	doLast {
 		logger.lifecycle(":exporting mappings")
@@ -470,8 +470,8 @@ task exportMappingsOfficial(dependsOn: downloadIntermediary) {
 	}
 }
 
-task importMappingsOfficial(dependsOn: invertIntermediary) {
-	def composeInput = invertIntermediary.output
+task importMappingsOfficial/*(dependsOn: invertIntermediary)*/ {
+	def composeInput = clientJar
 
 	doLast {
 		logger.lifecycle(":importing mappings")
@@ -509,7 +509,7 @@ task buildTinyWithEnum(dependsOn: "mergeTiny", type: FileOutput) {
 	}
 }
 
-task mapNamedJar(dependsOn: [buildTinyWithEnum, mapIntermediaryJar]) {
+task mapNamedJar(dependsOn: [buildTinyWithEnum/*, mapIntermediaryJar*/]) {
 	group = mapJarGroup
 	inputs.files downloadMcLibs.outputs.files.files
 	outputs.file(namedJar)
@@ -520,11 +520,11 @@ task mapNamedJar(dependsOn: [buildTinyWithEnum, mapIntermediaryJar]) {
 	doLast {
 		logger.lifecycle(":mapping minecraft to named")
 
-		mapJar(namedJar, intermediaryJar, buildTinyWithEnum.output, libraries, "intermediary", "named")
+		mapJar(namedJar, clientJar, buildTinyWithEnum.output, libraries, "intermediary", "named")
 	}
 }
 
-task insertAutoGeneratedEnumMappings(dependsOn : [buildYarnTiny,mapIntermediaryJar], type : FileOutput){
+task insertAutoGeneratedEnumMappings(dependsOn : [buildYarnTiny/*,mapIntermediaryJar*/], type : FileOutput){
 	group = buildMappingGroup
 	def noEnumV2 = buildYarnTiny.v2Output
 	output = new File(tempDir, "unmerged-named-v2-with-enum.tiny")
@@ -535,9 +535,9 @@ task insertAutoGeneratedEnumMappings(dependsOn : [buildYarnTiny,mapIntermediaryJ
 		logger.lifecycle(":seeking auto-mappable fields for unmerged mappings")
 
 		MappingNameCompleter.completeNames(
-				intermediaryJar.toPath(),
+				clientJar.toPath(),
 				noEnumV2.toPath(),
-				downloadIntermediary.dest.toPath(),
+				clientJar.dest.toPath(),
 				output.toPath()
 		)
 	}
@@ -555,10 +555,10 @@ task v2UnmergedYarnJar(dependsOn: insertAutoGeneratedEnumMappings, type: Jar) {
 	destinationDirectory.set(file("build/libs"))
 }
 
-task generateObfToNamedTiny(type: GenerateObfToNamedTiny, dependsOn: [downloadIntermediary, insertAutoGeneratedEnumMappings]) {
+task generateObfToNamedTiny(type: GenerateObfToNamedTiny, dependsOn: [/*downloadIntermediary, */insertAutoGeneratedEnumMappings]) {
 	group = buildMappingGroup
 	fallbackNamespace = 'official'
-	intermediary = downloadIntermediary.dest
+	intermediary = clientJar
 	mappings = insertAutoGeneratedEnumMappings.output
 	output = new File(buildDir, "libs/obfToNamed.tiny")
 	outputs.upToDateWhen { false }
@@ -569,10 +569,10 @@ task obfToNamedTinyJar(type: MappingsJar, dependsOn: [generateObfToNamedTiny]) {
 	mappings generateObfToNamedTiny.output
 }
 
-task generateObfToNamedITiny(type: GenerateObfToNamedTiny, dependsOn: [downloadIntermediary, insertAutoGeneratedEnumMappings]) {
+task generateObfToNamedITiny(type: GenerateObfToNamedTiny, dependsOn: [/*downloadIntermediary, */insertAutoGeneratedEnumMappings]) {
 	group = buildMappingGroup
-	fallbackNamespace = 'intermediary'
-	intermediary = downloadIntermediary.dest
+	fallbackNamespace = 'official'
+	intermediary = clientJar
 	mappings = insertAutoGeneratedEnumMappings.output
 	output = new File(buildDir, "libs/obfToNamedI.tiny")
 	outputs.upToDateWhen { false }

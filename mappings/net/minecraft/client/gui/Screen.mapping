@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/c/i net/minecraft/client/gui/Screen
+	METHOD a close ()V
+	METHOD a init (Lnet/minecraft/client/d;II)V

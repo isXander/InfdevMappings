@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/g/a
+	FIELD aq client Lnet/minecraft/client/d;
+	METHOD <init> (Lnet/minecraft/client/d;Lnet/minecraft/a/a/g;Lnet/minecraft/client/k;)V
+		ARG 1 client
+		ARG 3 user

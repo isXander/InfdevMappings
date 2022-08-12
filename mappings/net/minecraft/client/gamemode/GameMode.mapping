@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/d/a net/minecraft/client/gamemode/GameMode
+	FIELD b isCreative Z
+	METHOD <init> (Lnet/minecraft/client/d;)V
+		ARG 1 client
