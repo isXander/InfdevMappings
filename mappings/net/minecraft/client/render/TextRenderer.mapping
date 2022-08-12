@@ -1,0 +1,25 @@
+CLASS net/minecraft/client/c/k net/minecraft/client/render/TextRenderer
+	FIELD a charWidths [I
+	FIELD b fontAtlasTexture I
+	METHOD <init> (Lnet/minecraft/client/p;Ljava/lang/String;Lnet/minecraft/client/a/k;)V
+		ARG 1 options
+		ARG 2 fontPath
+		ARG 3 textureManager
+	METHOD a getWidth (Ljava/lang/String;)I
+		ARG 1 text
+	METHOD a drawWithShadow (Ljava/lang/String;III)V
+		ARG 1 text
+		ARG 2 x
+		ARG 3 y
+		ARG 4 color
+	METHOD a draw (Ljava/lang/String;IIIZ)V
+		ARG 1 text
+		ARG 2 x
+		ARG 3 y
+		ARG 4 color
+		ARG 5 darken
+	METHOD b draw (Ljava/lang/String;III)V
+		ARG 1 text
+		ARG 2 x
+		ARG 3 y
+		ARG 4 color

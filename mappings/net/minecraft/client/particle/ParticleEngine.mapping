@@ -1,0 +1,11 @@
+CLASS net/minecraft/client/f/d net/minecraft/client/particle/ParticleEngine
+	FIELD a world Lnet/minecraft/a/a/g;
+	FIELD b layers [Ljava/util/List;
+		COMMENT The particle layer array. Each element is a list of particles where the layer index determines the texture.
+		COMMENT Textures:
+		COMMENT <ul>
+		COMMENT     <li>0: /particles.png</li>
+		COMMENT     <li>1: /terrain.png</li>
+		COMMENT </ul>
+	METHOD <init> (Lnet/minecraft/a/a/g;Lnet/minecraft/client/a/k;)V
+		ARG 1 world

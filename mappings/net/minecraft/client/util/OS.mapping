@@ -1,4 +1,4 @@
-CLASS net/minecraft/client/e net/minecraft/client/OS
+CLASS net/minecraft/client/e net/minecraft/client/util/OS
 	FIELD a LINUX Lnet/minecraft/client/e;
 	FIELD b SOLARIS Lnet/minecraft/client/e;
 	FIELD c WINDOWS Lnet/minecraft/client/e;

@@ -1,0 +1,13 @@
+CLASS net/minecraft/client/a net/minecraft/client/gui/WorldLoadGui
+	FIELD a currentStage Ljava/lang/String;
+	FIELD b client Lnet/minecraft/client/d;
+	FIELD c title Ljava/lang/String;
+	FIELD d lastUpdateTime J
+	METHOD <init> (Lnet/minecraft/client/d;)V
+		ARG 1 client
+	METHOD a render (I)V
+		ARG 1 progress
+	METHOD a setupGui (Ljava/lang/String;)V
+		ARG 1 stage
+	METHOD b nextStage (Ljava/lang/String;)V
+		ARG 1 stage

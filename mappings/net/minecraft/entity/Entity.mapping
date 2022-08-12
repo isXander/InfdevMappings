@@ -1,0 +1,38 @@
+CLASS net/minecraft/a/c/b net/minecraft/entity/Entity
+	FIELD A makeStepSound Z
+	FIELD B fallDistance F
+	FIELD F footSize F
+	FIELD G noClip Z
+	FIELD I random Ljava/util/Random;
+	FIELD Q ySlideOffset F
+	FIELD a slide Z
+	FIELD d world Lnet/minecraft/a/a/g;
+	FIELD h x D
+	FIELD i y D
+	FIELD j z D
+	FIELD k xd D
+	FIELD l yd D
+	FIELD m zd D
+	FIELD r boundingBox Lnet/minecraft/a/d/b;
+	FIELD s onGround Z
+	FIELD t horizontalCollision Z
+	FIELD v heightOffset F
+	FIELD w bbWidth F
+	FIELD x bbHeight F
+	FIELD z walkDist F
+	METHOD <init> (Lnet/minecraft/a/a/g;)V
+		ARG 1 world
+	METHOD a setPos (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a setBoundingBoxSize (FF)V
+		ARG 1 width
+		ARG 2 height
+	METHOD b causeFallDamage (F)V
+	METHOD c move (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD i resetPos ()V
+		COMMENT Sets the y pos to the surface layer.

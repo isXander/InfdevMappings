@@ -1,0 +1,16 @@
+CLASS a/a net/minecraft/util/MathHelper
+	FIELD a SINE_TABLE [F
+	METHOD a sqrt (D)F
+		ARG 0 d
+	METHOD a sin (F)F
+		ARG 0 f
+	METHOD b round (D)I
+		ARG 0 d
+	METHOD b cos (F)F
+		ARG 0 f
+	METHOD c sqrt (F)F
+		ARG 0 f
+	METHOD d round (F)I
+		ARG 0 f
+	METHOD e abs (F)F
+		ARG 0 f

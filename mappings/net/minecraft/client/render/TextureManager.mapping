@@ -1,0 +1,17 @@
+CLASS net/minecraft/client/a/k net/minecraft/client/render/TextureManager
+	FIELD a idMap Ljava/util/HashMap;
+	FIELD c idBuffer Ljava/nio/IntBuffer;
+	FIELD d textureBuffer Ljava/nio/ByteBuffer;
+	FIELD g options Lnet/minecraft/client/p;
+	METHOD <init> (Lnet/minecraft/client/p;)V
+		ARG 1 options
+	METHOD a bindTexture (I)V
+		ARG 0 id
+	METHOD a scaleImage (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;
+		ARG 0 bufferedImage
+	METHOD a putTexture (Ljava/awt/image/BufferedImage;I)V
+		ARG 1 bufferedImage
+		ARG 2 id
+	METHOD a getTextureId (Ljava/lang/String;)I
+		ARG 1 path
+	METHOD b loadAllTextures ()V

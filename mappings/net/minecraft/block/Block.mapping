@@ -1,0 +1,67 @@
+CLASS net/minecraft/a/a/b/aa net/minecraft/block/Block
+	FIELD A clothRed Lnet/minecraft/a/a/b/aa;
+	FIELD B clothOrange Lnet/minecraft/a/a/b/aa;
+	FIELD C clothYellow Lnet/minecraft/a/a/b/aa;
+	FIELD D clothChartreuse Lnet/minecraft/a/a/b/aa;
+	FIELD E clothGreen Lnet/minecraft/a/a/b/aa;
+	FIELD F clothSpringGreen Lnet/minecraft/a/a/b/aa;
+	FIELD G clothCyan Lnet/minecraft/a/a/b/aa;
+	FIELD H clothCapri Lnet/minecraft/a/a/b/aa;
+	FIELD I clothUltramarine Lnet/minecraft/a/a/b/aa;
+	FIELD J clothViolet Lnet/minecraft/a/a/b/aa;
+	FIELD K clothPurple Lnet/minecraft/a/a/b/aa;
+	FIELD L clothMagenta Lnet/minecraft/a/a/b/aa;
+	FIELD M clothRose Lnet/minecraft/a/a/b/aa;
+	FIELD N clothDarkGray Lnet/minecraft/a/a/b/aa;
+	FIELD O clothLightGray Lnet/minecraft/a/a/b/aa;
+	FIELD P clothWhite Lnet/minecraft/a/a/b/aa;
+	FIELD Q dandelion Lnet/minecraft/a/a/b/ag;
+	FIELD R rose Lnet/minecraft/a/a/b/ag;
+	FIELD S mushroomBrown Lnet/minecraft/a/a/b/ag;
+	FIELD T mushroomRed Lnet/minecraft/a/a/b/ag;
+	FIELD U goldBlock Lnet/minecraft/a/a/b/aa;
+	FIELD V ironBlock Lnet/minecraft/a/a/b/aa;
+	FIELD W slabDouble Lnet/minecraft/a/a/b/aa;
+	FIELD X slab Lnet/minecraft/a/a/b/aa;
+	FIELD Y bricks Lnet/minecraft/a/a/b/aa;
+	FIELD Z tnt Lnet/minecraft/a/a/b/aa;
+	FIELD aa bookshelf Lnet/minecraft/a/a/b/aa;
+	FIELD ab cobblestoneMossy Lnet/minecraft/a/a/b/aa;
+	FIELD ac obsidian Lnet/minecraft/a/a/b/aa;
+	FIELD ad torch Lnet/minecraft/a/a/b/aa;
+	FIELD ae fire Lnet/minecraft/a/a/b/am;
+	FIELD af chest Lnet/minecraft/a/a/b/aa;
+	FIELD ag gear Lnet/minecraft/a/a/b/aa;
+	FIELD ah diamondOre Lnet/minecraft/a/a/b/aa;
+	FIELD ai diamondBlock Lnet/minecraft/a/a/b/aa;
+	FIELD aj craftingTable Lnet/minecraft/a/a/b/aa;
+	FIELD ak crops Lnet/minecraft/a/a/b/aa;
+	FIELD al farmland Lnet/minecraft/a/a/b/aa;
+	FIELD am furnace Lnet/minecraft/a/a/b/aa;
+	FIELD an furnaceLit Lnet/minecraft/a/a/b/aa;
+	FIELD at id I
+	FIELD b blocks [Lnet/minecraft/a/a/b/aa;
+	FIELD g stone Lnet/minecraft/a/a/b/aa;
+	FIELD h grass Lnet/minecraft/a/a/b/ai;
+	FIELD i dirt Lnet/minecraft/a/a/b/aa;
+	FIELD j cobblestone Lnet/minecraft/a/a/b/aa;
+	FIELD k planks Lnet/minecraft/a/a/b/aa;
+	FIELD l sapling Lnet/minecraft/a/a/b/aa;
+	FIELD m bedrock Lnet/minecraft/a/a/b/aa;
+	FIELD n waterFlowing Lnet/minecraft/a/a/b/aa;
+	FIELD o waterStill Lnet/minecraft/a/a/b/aa;
+	FIELD p lavaFlowing Lnet/minecraft/a/a/b/aa;
+	FIELD q lavaStill Lnet/minecraft/a/a/b/aa;
+	FIELD r sand Lnet/minecraft/a/a/b/aa;
+	FIELD s gravel Lnet/minecraft/a/a/b/aa;
+	FIELD t goldOre Lnet/minecraft/a/a/b/aa;
+	FIELD u ironOre Lnet/minecraft/a/a/b/aa;
+	FIELD v coalOre Lnet/minecraft/a/a/b/aa;
+	FIELD w wood Lnet/minecraft/a/a/b/aa;
+	FIELD x leaves Lnet/minecraft/a/a/b/p;
+	FIELD y sponge Lnet/minecraft/a/a/b/aa;
+	FIELD z glass Lnet/minecraft/a/a/b/aa;
+	METHOD <init> (ILnet/minecraft/a/a/d/c;)V
+		ARG 1 id
+	METHOD a (ILjava/util/Random;)I
+		ARG 2 random

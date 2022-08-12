@@ -2,17 +2,25 @@ CLASS net/minecraft/client/d net/minecraft/client/MinecraftClient
 	FIELD B fullscreen Z
 	FIELD D timer Lnet/minecraft/client/f;
 	FIELD E canvas Ljava/awt/Canvas;
+	FIELD F worldLoadGui Lnet/minecraft/client/a;
+	FIELD G resourceDownloader Lnet/minecraft/client/i;
 	FIELD J displayWidth I
 	FIELD K displayHeight I
+	FIELD L gameDir2 Ljava/io/File;
 	FIELD O gameDir Ljava/io/File;
 	FIELD a gameMode Lnet/minecraft/client/d/a;
 	FIELD b width I
 	FIELD c height I
+	FIELD d world Lnet/minecraft/a/a/g;
+	FIELD e worldRenderer Lnet/minecraft/client/a/b;
 	FIELD f player Lnet/minecraft/client/g/a;
+	FIELD g particleEngine Lnet/minecraft/client/f/d;
 	FIELD h user Lnet/minecraft/client/k;
 	FIELD i host Ljava/lang/String;
 	FIELD j appletMode Z
 	FIELD k paused Z
+	FIELD l textureManager Lnet/minecraft/client/a/k;
+	FIELD m textRenderer Lnet/minecraft/client/c/k;
 	FIELD n currentScreen Lnet/minecraft/client/c/i;
 	FIELD p loadmapUser Ljava/lang/String;
 	FIELD q loadmapId I

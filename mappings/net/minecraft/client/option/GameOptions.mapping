@@ -1,0 +1,41 @@
+CLASS net/minecraft/client/p net/minecraft/client/option/GameOptions
+	FIELD A client Lnet/minecraft/client/d;
+	FIELD B optionsFile Ljava/io/File;
+	FIELD a music Z
+	FIELD b sounds Z
+	FIELD c invertMouse Z
+	FIELD d showFps Z
+	FIELD e renderDistance I
+	FIELD f bobView Z
+	FIELD g anaglyph3d Z
+	FIELD h limitFramerate Z
+	FIELD i fancyGraphics Z
+	FIELD j forwardKey Lnet/minecraft/client/g;
+	FIELD k leftKey Lnet/minecraft/client/g;
+	FIELD l backwardKey Lnet/minecraft/client/g;
+	FIELD m rightKey Lnet/minecraft/client/g;
+	FIELD n jumpKey Lnet/minecraft/client/g;
+	FIELD o inventoryKey Lnet/minecraft/client/g;
+	FIELD p dropKey Lnet/minecraft/client/g;
+	FIELD q fogKey Lnet/minecraft/client/g;
+	FIELD r saveLocationKey Lnet/minecraft/client/g;
+	FIELD s loadLocationKey Lnet/minecraft/client/g;
+	FIELD t keybinds [Lnet/minecraft/client/g;
+	FIELD v difficulty I
+	FIELD x RENDER_DISTANCES [Ljava/lang/String;
+	FIELD y DIFFICULTIES [Ljava/lang/String;
+	FIELD z chatKey Lnet/minecraft/client/g;
+	METHOD <init> (Lnet/minecraft/client/d;Ljava/io/File;)V
+		ARG 1 client
+		ARG 2 file
+	METHOD a writeOptions ()V
+	METHOD a getKeybindDisplayString (I)Ljava/lang/String;
+		ARG 1 index
+	METHOD a setKeybindKey (II)V
+		ARG 1 keybindIndex
+		ARG 2 key
+	METHOD b loadOptions ()V
+	METHOD b getOptionDisplayString (I)Ljava/lang/String;
+		ARG 1 index
+	METHOD b cycleOption (II)V
+		ARG 1 optionIndex

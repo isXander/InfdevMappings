@@ -1,0 +1,27 @@
+CLASS net/minecraft/a/d/b net/minecraft/util/AABB
+	FIELD a x0 D
+	FIELD b y0 D
+	FIELD c z0 D
+	FIELD d x1 D
+	FIELD e y1 D
+	FIELD f z1 D
+	METHOD <init> (DDDDDD)V
+		ARG 1 x0
+		ARG 3 y0
+		ARG 5 z0
+		ARG 7 x1
+		ARG 9 y1
+		ARG 11 z1
+	METHOD a copy ()Lnet/minecraft/a/d/b;
+	METHOD a expanded (DDD)Lnet/minecraft/a/d/b;
+		ARG 1 xa
+		ARG 3 ya
+		ARG 5 za
+	METHOD a clipYCollide (Lnet/minecraft/a/d/b;D)D
+	METHOD b clipZCollide (Lnet/minecraft/a/d/b;D)D
+	METHOD c moved (DDD)Lnet/minecraft/a/d/b;
+		ARG 1 xa
+		ARG 3 ya
+		ARG 5 za
+	METHOD c clipXCollide (Lnet/minecraft/a/d/b;D)D
+	METHOD d move (DDD)Lnet/minecraft/a/d/b;

@@ -1,0 +1,10 @@
+CLASS net/minecraft/client/i net/minecraft/client/util/ResourceDownloadThread
+	FIELD a resourceFolder Ljava/io/File;
+	FIELD b client Lnet/minecraft/client/d;
+	METHOD <init> (Ljava/io/File;Lnet/minecraft/client/d;)V
+		ARG 1 gameDir
+		ARG 2 client
+	METHOD a writeToFile (Ljava/net/URL;Ljava/io/File;)V
+		ARG 1 url
+		ARG 2 file
+	METHOD run run ()V
