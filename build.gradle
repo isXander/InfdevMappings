@@ -254,7 +254,7 @@ task checkMappings {
 	}
 }
 
-task buildYarnTiny(type: WithV2FileOutput) {
+task buildYarnTiny(dependsOn: downloadMcJars, type: WithV2FileOutput) {
 	group = buildMappingGroup
 	inputs.dir mappingsDir
 	if (!libs.exists()) {
