@@ -22,8 +22,12 @@ CLASS net/minecraft/client/d net/minecraft/client/MinecraftClient
 	FIELD l textureManager Lnet/minecraft/client/a/k;
 	FIELD m textRenderer Lnet/minecraft/client/c/k;
 	FIELD n currentScreen Lnet/minecraft/client/c/i;
+	FIELD o gameRenderer Lnet/minecraft/client/a/e;
 	FIELD p loadmapUser Ljava/lang/String;
 	FIELD q loadmapId I
+	FIELD u gameOptions Lnet/minecraft/client/p;
+	FIELD v soundEngine Lnet/minecraft/client/e/c;
+	FIELD w mouseGrabber Lnet/minecraft/client/l;
 	FIELD x running Z
 	FIELD z mouseGrabbed Z
 	METHOD <init> (Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V
@@ -39,4 +43,5 @@ CLASS net/minecraft/client/d net/minecraft/client/MinecraftClient
 	METHOD c quitGame ()V
 	METHOD d grabMouse ()V
 	METHOD f toggleFullscreen ()V
+	METHOD l tick ()V
 	METHOD run run ()V
