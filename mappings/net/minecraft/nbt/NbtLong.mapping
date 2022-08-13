@@ -1,0 +1,4 @@
+CLASS com/a/a/a net/minecraft/nbt/NbtLong
+	FIELD a data J
+	METHOD <init> (J)V
+		ARG 1 data

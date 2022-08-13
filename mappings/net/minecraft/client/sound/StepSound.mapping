@@ -1,0 +1,4 @@
+CLASS net/minecraft/a/a/b/o net/minecraft/client/sound/StepSound
+	FIELD a volume F
+	FIELD b pitch F
+	METHOD b getName ()Ljava/lang/String;

@@ -1,0 +1,4 @@
+CLASS com/a/a/b net/minecraft/nbt/NbtFloat
+	FIELD a data F
+	METHOD <init> (F)V
+		ARG 1 data

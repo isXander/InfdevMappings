@@ -1,4 +1,4 @@
-CLASS net/minecraft/client/a/b net/minecraft/client/render/WorldRenderer
-	FIELD l client Lnet/minecraft/client/d;
-	METHOD <init> (Lnet/minecraft/client/d;Lnet/minecraft/client/a/k;)V
+CLASS net/minecraft/client/a/g net/minecraft/client/render/WorldRenderer
+	FIELD a client Lnet/minecraft/client/d;
+	METHOD <init> (Lnet/minecraft/client/d;)V
 		ARG 1 client

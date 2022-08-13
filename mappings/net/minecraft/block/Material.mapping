@@ -1,0 +1,2 @@
+CLASS net/minecraft/a/a/d/c net/minecraft/block/Material
+	METHOD d isFluid ()Z

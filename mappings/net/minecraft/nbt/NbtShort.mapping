@@ -1,0 +1,4 @@
+CLASS com/a/a/h net/minecraft/nbt/NbtShort
+	FIELD a data S
+	METHOD <init> (S)V
+		ARG 1 data

@@ -25,6 +25,8 @@ CLASS net/minecraft/a/a/b/aa net/minecraft/block/Block
 	FIELD X slab Lnet/minecraft/a/a/b/aa;
 	FIELD Y bricks Lnet/minecraft/a/a/b/aa;
 	FIELD Z tnt Lnet/minecraft/a/a/b/aa;
+	FIELD aA stepSound Lnet/minecraft/a/a/b/o;
+	FIELD aC material Lnet/minecraft/a/a/d/c;
 	FIELD aa bookshelf Lnet/minecraft/a/a/b/aa;
 	FIELD ab cobblestoneMossy Lnet/minecraft/a/a/b/aa;
 	FIELD ac obsidian Lnet/minecraft/a/a/b/aa;

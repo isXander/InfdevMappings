@@ -1,2 +1,4 @@
 CLASS net/minecraft/a/a/g net/minecraft/world/World
+	METHOD a spawnParticle (Ljava/lang/String;DDDDDD)V
+	METHOD a playSound (Lnet/minecraft/a/c/b;Ljava/lang/String;FF)V
 	METHOD a getBlocksInBox (Lnet/minecraft/a/d/b;)Ljava/util/List;

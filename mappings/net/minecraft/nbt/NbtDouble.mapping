@@ -1,0 +1,4 @@
+CLASS com/a/a/g net/minecraft/nbt/NbtDouble
+	FIELD a data D
+	METHOD <init> (D)V
+		ARG 1 data

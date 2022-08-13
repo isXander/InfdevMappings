@@ -1,0 +1,14 @@
+CLASS net/minecraft/a/c/f net/minecraft/entity/LivingEntity
+	FIELD R silentTicks I
+	FIELD W bodyYaw F
+	FIELD X bodyPitch F
+	FIELD Y textureLocation Ljava/lang/String;
+	FIELD Z health I
+	FIELD aa prevHealth I
+	FIELD ae deadTicks I
+	FIELD am sidewardVelocity F
+	FIELD an forwardVelocity F
+	FIELD ao isJumping Z
+	FIELD ap movementSpeed F
+	METHOD d updateInputVelocity ()V
+	METHOD e tickLiving ()V

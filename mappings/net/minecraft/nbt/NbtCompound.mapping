@@ -1,0 +1,54 @@
+CLASS com/a/a/c net/minecraft/nbt/NbtCompound
+	FIELD a data Ljava/util/Map;
+	METHOD a has (Ljava/lang/String;)Z
+		ARG 1 key
+	METHOD a put (Ljava/lang/String;B)V
+		ARG 1 key
+		ARG 2 by
+	METHOD a put (Ljava/lang/String;F)V
+		ARG 1 key
+		ARG 2 f
+	METHOD a put (Ljava/lang/String;I)V
+		ARG 1 key
+		ARG 2 i
+	METHOD a put (Ljava/lang/String;J)V
+		ARG 1 key
+		ARG 2 l
+	METHOD a put (Ljava/lang/String;Lcom/a/a/c;)V
+		ARG 1 key
+		ARG 2 compound
+	METHOD a put (Ljava/lang/String;Lcom/a/a/j;)V
+		ARG 1 key
+		ARG 2 nbt
+	METHOD a put (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 key
+		ARG 2 string
+	METHOD a put (Ljava/lang/String;S)V
+		ARG 1 key
+		ARG 2 s
+	METHOD a put (Ljava/lang/String;Z)V
+		ARG 1 name
+		ARG 2 bl
+	METHOD a put (Ljava/lang/String;[B)V
+		ARG 1 key
+		ARG 2 bytes
+	METHOD b getByte (Ljava/lang/String;)B
+		ARG 1 key
+	METHOD c getShort (Ljava/lang/String;)S
+		ARG 1 key
+	METHOD d getInt (Ljava/lang/String;)I
+		ARG 1 key
+	METHOD e getLong (Ljava/lang/String;)J
+		ARG 1 key
+	METHOD f getFloat (Ljava/lang/String;)F
+		ARG 1 key
+	METHOD g getString (Ljava/lang/String;)Ljava/lang/String;
+		ARG 1 key
+	METHOD h getByteArray (Ljava/lang/String;)[B
+		ARG 1 key
+	METHOD i getCompound (Ljava/lang/String;)Lcom/a/a/c;
+		ARG 1 key
+	METHOD j getList (Ljava/lang/String;)Lcom/a/a/f;
+		ARG 1 key
+	METHOD k getBoolean (Ljava/lang/String;)Z
+		ARG 1 key

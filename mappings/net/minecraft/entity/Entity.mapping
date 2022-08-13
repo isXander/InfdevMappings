@@ -4,21 +4,33 @@ CLASS net/minecraft/a/c/b net/minecraft/entity/Entity
 	FIELD F footSize F
 	FIELD G noClip Z
 	FIELD I random Ljava/util/Random;
+	FIELD J aliveTicks I
+	FIELD L fireTicks I
+	FIELD O oxygen I
 	FIELD Q ySlideOffset F
 	FIELD a slide Z
 	FIELD d world Lnet/minecraft/a/a/g;
+	FIELD e prevX D
+	FIELD f prevY D
+	FIELD g prevZ D
 	FIELD h x D
 	FIELD i y D
 	FIELD j z D
-	FIELD k xd D
-	FIELD l yd D
-	FIELD m zd D
+	FIELD k motionX D
+	FIELD l motionY D
+	FIELD m motionZ D
+	FIELD n yaw F
+	FIELD o pitch F
+	FIELD p prevYaw F
+	FIELD q prevPitch F
 	FIELD r boundingBox Lnet/minecraft/a/d/b;
 	FIELD s onGround Z
 	FIELD t horizontalCollision Z
+	FIELD u dead Z
 	FIELD v heightOffset F
 	FIELD w bbWidth F
 	FIELD x bbHeight F
+	FIELD y prevWalkDist F
 	FIELD z walkDist F
 	METHOD <init> (Lnet/minecraft/a/a/g;)V
 		ARG 1 world
@@ -29,10 +41,52 @@ CLASS net/minecraft/a/c/b net/minecraft/entity/Entity
 	METHOD a setBoundingBoxSize (FF)V
 		ARG 1 width
 		ARG 2 height
+	METHOD a serialize (Lcom/a/a/c;)V
+		ARG 1 nbt
+	METHOD a (Lnet/minecraft/a/a/d/c;)Z
+		ARG 1 material
+	METHOD a damage (Lnet/minecraft/a/c/b;I)Z
+		ARG 1 attacker
+		ARG 2 damage
+	METHOD a onPlayerCollision (Lnet/minecraft/a/c/e/a;)V
+		ARG 1 player
+	METHOD a nbtList ([D)Lcom/a/a/f;
+		ARG 0 entries
+	METHOD b setPositionAndAngles (DDDFF)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 yaw
+		ARG 8 pitch
 	METHOD b causeFallDamage (F)V
+	METHOD b moveInDirection (FFF)V
+		ARG 1 xInput
+		ARG 2 zInput
+	METHOD b damage (I)V
+	METHOD b deserialize (Lcom/a/a/c;)V
+		ARG 1 nbt
+	METHOD b getDistanceSquared (Lnet/minecraft/a/c/b;)D
+		ARG 1 entity
+	METHOD b_ tick ()V
 	METHOD c move (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD c serializeIfAlive (Lcom/a/a/c;)Z
+		ARG 1 nbt
+	METHOD c onCollision (Lnet/minecraft/a/c/b;)V
+		ARG 1 entity
+	METHOD d addVelocity (DDD)V
+		ARG 1 velocityX
+		ARG 3 velocityY
+		ARG 5 velocityZ
+	METHOD d serializeEntity (Lcom/a/a/c;)V
+		ARG 1 nbt
+	METHOD e deserializeEntity (Lcom/a/a/c;)V
+		ARG 1 nbt
 	METHOD i resetPos ()V
 		COMMENT Sets the y pos to the surface layer.
+	METHOD j remove ()V
+	METHOD l getEyeHeight ()F
+	METHOD o getTextureLocation ()Ljava/lang/String;
+	METHOD p isAlive ()Z

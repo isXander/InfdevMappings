@@ -18,6 +18,7 @@ CLASS net/minecraft/a/d/b net/minecraft/util/AABB
 		ARG 3 ya
 		ARG 5 za
 	METHOD a clipYCollide (Lnet/minecraft/a/d/b;D)D
+	METHOD b extended (DDD)Lnet/minecraft/a/d/b;
 	METHOD b clipZCollide (Lnet/minecraft/a/d/b;D)D
 	METHOD c moved (DDD)Lnet/minecraft/a/d/b;
 		ARG 1 xa

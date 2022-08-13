@@ -1,0 +1,4 @@
+CLASS com/a/a/i net/minecraft/nbt/NbtByteArray
+	FIELD a data [B
+	METHOD <init> ([B)V
+		ARG 1 data

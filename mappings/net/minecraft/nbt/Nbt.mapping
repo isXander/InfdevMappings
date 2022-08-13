@@ -1,0 +1,17 @@
+CLASS com/a/a/j net/minecraft/nbt/Nbt
+	FIELD a name Ljava/lang/String;
+	METHOD a getId ()B
+	METHOD a getById (B)Lcom/a/a/j;
+		ARG 0 id
+	METHOD a save (Lcom/a/a/j;Ljava/io/DataOutput;)V
+		ARG 0 nbt
+		ARG 1 dataOutput
+	METHOD a read (Ljava/io/DataInput;)V
+		ARG 1 dataInput
+	METHOD a write (Ljava/io/DataOutput;)V
+		ARG 1 dataOutput
+	METHOD b load (Ljava/io/DataInput;)Lcom/a/a/j;
+		ARG 0 dataInput
+	METHOD c getName ()Ljava/lang/String;
+	METHOD l setName (Ljava/lang/String;)Lcom/a/a/j;
+		ARG 1 name

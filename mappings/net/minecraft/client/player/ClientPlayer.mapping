@@ -1,4 +1,4 @@
-CLASS net/minecraft/client/g/a net/minecraft/client/player/Player
+CLASS net/minecraft/client/g/a net/minecraft/client/player/ClientPlayer
 	FIELD a input Lnet/minecraft/client/g/b;
 	FIELD aq client Lnet/minecraft/client/d;
 	METHOD <init> (Lnet/minecraft/client/d;Lnet/minecraft/a/a/g;Lnet/minecraft/client/k;)V
