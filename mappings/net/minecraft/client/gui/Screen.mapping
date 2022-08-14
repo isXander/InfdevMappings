@@ -1,3 +1,8 @@
 CLASS net/minecraft/client/c/i net/minecraft/client/gui/Screen
+	FIELD a client Lnet/minecraft/client/d;
+	FIELD b width I
+	FIELD c height I
+	FIELD d buttons Ljava/util/List;
 	METHOD a close ()V
 	METHOD a init (Lnet/minecraft/client/d;II)V
+	METHOD b init ()V
